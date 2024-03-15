@@ -21,9 +21,9 @@ import org.junit.Test;
  */
 public class WaitDemo {
 
-    public final Object object = new Object();
+    private final Object object = new Object();
 
-    Runnable wait = () -> {
+    private Runnable wait = () -> {
         synchronized (object) {
             System.out.println(Thread.currentThread().getName() + " 开始");
             try {
@@ -38,7 +38,7 @@ public class WaitDemo {
     };
 
     // 3s
-    Runnable timedWait = () -> {
+    private Runnable timedWait = () -> {
         synchronized (object) {
             System.out.println(Thread.currentThread().getName() + " 开始");
             try {
@@ -52,7 +52,7 @@ public class WaitDemo {
         }
     };
 
-    Runnable notify = () -> {
+    private Runnable notify = () -> {
         synchronized (object) {
             System.out.println(Thread.currentThread().getName() + " 开始");
             object.notify();
@@ -66,7 +66,7 @@ public class WaitDemo {
         }
     };
 
-    Runnable notifyAll = () -> {
+    private Runnable notifyAll = () -> {
         synchronized (object) {
             System.out.println(Thread.currentThread().getName() + " 开始");
             object.notifyAll();

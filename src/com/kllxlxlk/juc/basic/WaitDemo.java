@@ -1,4 +1,4 @@
-package com.kllxlxlk.juc;
+package com.kllxlxlk.juc.basic;
 
 
 import org.junit.Test;

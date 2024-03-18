@@ -1,10 +1,10 @@
-package com.kllxlxlk.juc;
+package com.kllxlxlk.juc.basic;
 
 /**
  * stop 方法会直接终止线程
  * stop 已废弃，不建议再使用
  */
-public class StopThreadDemo {
+public class StopDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Runnable runnable = () -> {

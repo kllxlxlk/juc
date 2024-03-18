@@ -1,11 +1,11 @@
-package com.kllxlxlk.juc;
+package com.kllxlxlk.juc.basic;
 
 
 /**
  * 1、sleep 不会释放锁
  * 2、sleep 时被调用 interrupt 方法，会抛出中断异常，并且会清除线程的中断状态
  */
-public class ThreadSleepDemo {
+public class SleepDemo {
 
     public static int zhangAccountBalance = 100;
 
@@ -13,7 +13,7 @@ public class ThreadSleepDemo {
 
     public static void main(String[] args) throws InterruptedException {
         Runnable transfer = () -> {
-            synchronized (ThreadSleepDemo.class) {
+            synchronized (SleepDemo.class) {
                 System.out.println("transfer 开始运行");
 
                 while (zhangAccountBalance > 0) {
@@ -42,7 +42,7 @@ public class ThreadSleepDemo {
         };
 
         Runnable r2 = () -> {
-            synchronized (ThreadSleepDemo.class) {
+            synchronized (SleepDemo.class) {
                 // 在 transfer 线程结束后才会开始运行，表明 sleep 不会释放锁
                 System.out.println("r2 开始运行");
                 System.out.println("r2 结束运行");

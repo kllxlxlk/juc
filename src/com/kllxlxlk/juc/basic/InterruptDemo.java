@@ -1,4 +1,4 @@
-package com.kllxlxlk.juc;
+package com.kllxlxlk.juc.basic;
 
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 2、isInterrupted() 判断线程是否被中断
  * 3、interrupted()   判断线程是否被中断，清除线程的中断状态
  */
-public class InterruptThreadDemo {
+public class InterruptDemo {
 
     public static int zhangAccountBalance = 10000000;
 
